@@ -1,24 +1,247 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Cat World: Origins, Anatomy and Quiz!</title>
-    <meta name="description" content="Discover cat origins, anatomy explained simply and test your knowledge with a fun quiz." />
-    <meta name="author" content="Cat World" />
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cat World - Mondo dei Gatti</title>
+    <meta name="description" content="Scopri tutto sui gatti: dalle antiche origini alle curiosità più interessanti">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="nav-bar">
+        <div class="nav-container">
+            <div class="nav-brand">🐱 Cat World</div>
+            <div class="nav-links">
+                <a href="#home" class="nav-link active" data-section="home">🏠 Home</a>
+                <a href="#origini" class="nav-link" data-section="origini">🏺 Origini</a>
+                <a href="#anatomia" class="nav-link" data-section="anatomia">🔍 Anatomia</a>
+                <a href="#curiosita" class="nav-link" data-section="curiosita">💡 Curiosità</a>
+                <a href="#quiz" class="nav-link" data-section="quiz">🧠 Quiz</a>
+                <a href="#galleria" class="nav-link" data-section="galleria">📸 Galleria</a>
+            </div>
+            <button class="theme-toggle" id="themeToggle">🌙</button>
+        </div>
+    </nav>
 
-    <meta property="og:title" content="Cat World: Origins, Anatomy and Quiz!" />
-    <meta property="og:description" content="Discover cat origins, anatomy explained simply and test your knowledge with a fun quiz." />
-    <meta property="og:type" content="website" />
-    <meta property="og:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
+    <!-- Hero Section -->
+    <section id="home" class="hero-section">
+        <div class="hero-content">
+            <div class="hero-cat">🐱</div>
+            <h1 class="hero-title">Cat World</h1>
+            <p class="hero-subtitle">
+                Dai miti antichi ai baffi curiosi: scopri tutto sui gatti in modo semplice e divertente 😺
+            </p>
+            <div class="hero-buttons">
+                <button class="btn btn-primary" onclick="scrollToSection('origini')">
+                    🏺 Scopri le Origini
+                </button>
+                <button class="btn btn-secondary" onclick="scrollToSection('anatomia')">
+                    🔍 Anatomia
+                </button>
+                <button class="btn btn-accent" onclick="scrollToSection('quiz')">
+                    🧠 Fai il Quiz
+                </button>
+            </div>
+            <div class="scroll-indicator">
+                <p>Scorri per iniziare il viaggio ⬇️</p>
+            </div>
+        </div>
+    </section>
 
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:site" content="@lovable_dev" />
-    <meta name="twitter:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
-  </head>
+    <!-- Origins Section -->
+    <section id="origini" class="section">
+        <div class="container">
+            <h2 class="section-title">🏺 Origini e Mitologie</h2>
+            <div class="cards-grid">
+                <div class="card mythology-card">
+                    <div class="card-header">
+                        <span class="card-icon">🏺</span>
+                        <h3>Antico Egitto</h3>
+                        <p class="card-subtitle">Dea Bastet</p>
+                    </div>
+                    <div class="card-content">
+                        <p>Venerati come protettori della casa, legati alla dea Bastet. Nell'antico Egitto, i gatti erano considerati sacri e associati alla dea Bastet.</p>
+                    </div>
+                </div>
 
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
-  </body>
+                <div class="card mythology-card">
+                    <div class="card-header">
+                        <span class="card-icon">🐾</span>
+                        <h3>Giappone</h3>
+                        <p class="card-subtitle">Maneki-neko</p>
+                    </div>
+                    <div class="card-content">
+                        <p>Il Maneki-neko porta fortuna: zampa alzata e buona sorte! La famosa statuetta del gatto che saluta è un simbolo di fortuna e prosperità.</p>
+                    </div>
+                </div>
+
+                <div class="card mythology-card">
+                    <div class="card-header">
+                        <span class="card-icon">⚡</span>
+                        <h3>Europa del Nord</h3>
+                        <p class="card-subtitle">Dea Freya</p>
+                    </div>
+                    <div class="card-content">
+                        <p>La dea Freya viaggiava su un carro trainato da gatti giganti chiamati Bygul e Trjegul nella mitologia norrena.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Anatomy Section -->
+    <section id="anatomia" class="section">
+        <div class="container">
+            <h2 class="section-title">🔍 Anatomia Felina</h2>
+            <div class="anatomy-grid">
+                <div class="anatomy-card">
+                    <div class="anatomy-icon">👁️</div>
+                    <h3>Occhi</h3>
+                    <p>Visione notturna eccezionale grazie al tapetum lucidum.</p>
+                </div>
+                <div class="anatomy-card">
+                    <div class="anatomy-icon">👂</div>
+                    <h3>Orecchie</h3>
+                    <p>Udito ultra-sensibile: sentono frequenze fino a 64.000 Hz.</p>
+                </div>
+                <div class="anatomy-card">
+                    <div class="anatomy-icon">👃</div>
+                    <h3>Naso</h3>
+                    <p>Olfatto 14 volte più potente di quello umano.</p>
+                </div>
+                <div class="anatomy-card">
+                    <div class="anatomy-icon">🦷</div>
+                    <h3>Denti</h3>
+                    <p>30 denti specializzati per cacciare e masticare.</p>
+                </div>
+                <div class="anatomy-card">
+                    <div class="anatomy-icon">🐾</div>
+                    <h3>Zampe</h3>
+                    <p>Artigli retrattili e cuscinetti sensibili.</p>
+                </div>
+                <div class="anatomy-card">
+                    <div class="anatomy-icon">📏</div>
+                    <h3>Baffi</h3>
+                    <p>Recettori tattili per percepire spazi e movimenti.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Curiosities Section -->
+    <section id="curiosita" class="section">
+        <div class="container">
+            <h2 class="section-title">💡 Curiosità Feline</h2>
+            <div class="curiosities-grid">
+                <div class="curiosity-card">
+                    <span class="curiosity-emoji">😴</span>
+                    <h3>Dormiglioni Professionisti</h3>
+                    <p>I gatti dormono 12-16 ore al giorno, conservando energia per brevi ma intense sessioni di caccia.</p>
+                </div>
+                <div class="curiosity-card">
+                    <span class="curiosity-emoji">😸</span>
+                    <h3>Le Fusa Terapeutiche</h3>
+                    <p>Le fusa vibrano tra 20-50 Hz, frequenze che possono favorire la guarigione delle ossa.</p>
+                </div>
+                <div class="curiosity-card">
+                    <span class="curiosity-emoji">🎯</span>
+                    <h3>Atterraggio Perfetto</h3>
+                    <p>Grazie al riflesso di raddrizzamento, atterrano sempre sulle zampe in 0,3 secondi.</p>
+                </div>
+                <div class="curiosity-card">
+                    <span class="curiosity-emoji">🗣️</span>
+                    <h3>100 Vocalizzi</h3>
+                    <p>I gatti adulti miagolano principalmente per comunicare con gli umani, non tra loro.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quiz Section -->
+    <section id="quiz" class="section">
+        <div class="container">
+            <h2 class="section-title">🧠 Quiz sui Gatti</h2>
+            <div class="quiz-container">
+                <div class="quiz-progress">
+                    <div class="progress-bar">
+                        <div class="progress-fill" id="progressFill"></div>
+                    </div>
+                    <span class="progress-text" id="progressText">Domanda 1 di 5</span>
+                </div>
+                
+                <div class="quiz-card" id="quizCard">
+                    <h3 class="quiz-question" id="quizQuestion">Da quale specie selvaggia discende principalmente il gatto domestico?</h3>
+                    <div class="quiz-answers" id="quizAnswers">
+                        <!-- Answers populated by JavaScript -->
+                    </div>
+                    <div class="quiz-explanation" id="quizExplanation" style="display: none;"></div>
+                    <div class="quiz-buttons">
+                        <button class="btn btn-primary" id="nextButton" onclick="nextQuestion()" style="display: none;">
+                            Prossima Domanda
+                        </button>
+                    </div>
+                </div>
+
+                <div class="quiz-results" id="quizResults" style="display: none;">
+                    <h3>Quiz Completato! 🎉</h3>
+                    <div class="score-display">
+                        <span id="finalScore">0</span> / 5
+                    </div>
+                    <p id="scoreMessage"></p>
+                    <button class="btn btn-accent" onclick="restartQuiz()">Ricomincia Quiz</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="galleria" class="section">
+        <div class="container">
+            <h2 class="section-title">📸 Galleria Felina</h2>
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <div class="gallery-placeholder">🐱</div>
+                    <p>Gatto Persiano</p>
+                </div>
+                <div class="gallery-item">
+                    <div class="gallery-placeholder">😸</div>
+                    <p>Gatto Siamese</p>
+                </div>
+                <div class="gallery-item">
+                    <div class="gallery-placeholder">😺</div>
+                    <p>Maine Coon</p>
+                </div>
+                <div class="gallery-item">
+                    <div class="gallery-placeholder">🐈</div>
+                    <p>Bengala</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>🐱 Cat World</h3>
+                    <p>Il tuo portale dedicato al meraviglioso mondo dei gatti</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Sezioni</h4>
+                    <a href="#origini">Origini</a>
+                    <a href="#anatomia">Anatomia</a>
+                    <a href="#curiosita">Curiosità</a>
+                    <a href="#quiz">Quiz</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Cat World. Tutti i diritti riservati.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
 </html>
